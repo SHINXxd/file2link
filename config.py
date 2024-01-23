@@ -31,7 +31,7 @@ PORT = os.environ.get("PORT", "8080")
 DB_URI = os.environ.get("DATABASE_URL", "")
 DB_NAME = os.environ.get("DATABASE_NAME", "filesharexbot")
 
-#force sub channel id, if you want enable force sub
+#force sub channel id, use "," between each id
 FORCE_SUB_CHANNELS = []
 
 TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "4"))
