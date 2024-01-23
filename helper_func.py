@@ -10,15 +10,15 @@ from pyrogram.errors.exceptions.bad_request_400 import UserNotParticipant
 from pyrogram.errors import FloodWait
 
 async def is_subscribed(filter, client, update):
-    if not Config.FORCE_SUB_CHANNELS:
+    if not FORCE_SUB_CHANNELS:
         return True
     
     user_id = update.from_user.id
     
-    if user_id in Config.ADMINS:
+    if user_id in ADMINS:
         return True
 
-    for force_sub_channel in Config.FORCE_SUB_CHANNELS:
+    for force_sub_channel in FORCE_SUB_CHANNELS:
         try:
             member = await client.get_chat_member(chat_id=force_sub_channel, user_id=user_id)
         except UserNotParticipant:
