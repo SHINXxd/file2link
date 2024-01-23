@@ -123,7 +123,7 @@ async def not_joined(client: Client, message: Message):
     buttons = []
     
     # Iterate through each force subscription channel
-    for idx, force_sub_channel in enumerate(Config.FORCE_SUB_CHANNELS, start=1):
+    for idx, force_sub_channel in enumerate(FORCE_SUB_CHANNELS, start=1):
         try:
             invite_link = await client.create_chat_invite_link(chat_id=force_sub_channel)
             buttons.append(
