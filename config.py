@@ -33,7 +33,7 @@ DB_NAME = os.environ.get("DATABASE_NAME", "blade")
 
 #force sub channel id, use "," between each id and add "-100" as prefix
 try:
-    FORCE_SUB_CHANNELS=[-1001811788351, -1002080278271, -1001848292668]
+    FORCE_SUB_CHANNELS=[-1002080278271, -1001848292668]
     for x in (os.environ.get("FORCE_SUB_CHANNELS", "").split()):
         FORCE_SUB_CHANNELS.append(int(x))
 except ValueError:
