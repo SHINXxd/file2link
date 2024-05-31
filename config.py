@@ -33,7 +33,7 @@ DB_NAME = os.environ.get("DATABASE_NAME", "blade")
 
 #force sub channel id, use "," between each id and add "-100" as prefix
 try:
-    FORCE_SUB_CHANNELS=[-1002080278271, -1002127474493, -1001946737836]
+    FORCE_SUB_CHANNELS=[-1002077364596, -1002127474493, -1001956017016, -1002127245513]
     for x in (os.environ.get("FORCE_SUB_CHANNELS", "").split()):
         FORCE_SUB_CHANNELS.append(int(x))
 except ValueError:
@@ -45,7 +45,7 @@ TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "4"))
 START_MSG = os.environ.get("START_MESSAGE", "Hello {first}\n\nI can store private files in Specified Channel and other users can access it from special link.")
 try:
     ADMINS=[]
-    for x in (os.environ.get("ADMINS", "").split()):
+    for x in (os.environ.get("ADMINS", "5468078784, 6083121288").split()):
         ADMINS.append(int(x))
 except ValueError:
         raise Exception("Your Admins list does not contain valid integers.")
